@@ -1,9 +1,5 @@
 <?php
-$cache=$this->getDi()->getShared('cache');
-if ($cache->has('dch_messages')) {
-    $messages=$cache->get('dch_messages');
-} else {
-    $messages = [
+$messages = [
         'setting_title' => 'Standaardinstellingen bijwerken',
         'product_title' => 'Product toevoegen',
         'signup_title' => 'Aanmelden',
@@ -13,5 +9,3 @@ if ($cache->has('dch_messages')) {
         'access' => 'toegang geweigerd',
         'token' => 'Drager niet gevonden!!!!!'
     ];
-    $cache->set('dch_messages', $messages);
-}
